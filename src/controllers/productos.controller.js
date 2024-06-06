@@ -46,6 +46,9 @@ productosCtrl.eliminaProducto =  async (req,res) => {
     await modeloProductos.remove({ nombre: nombreProducto }) //buscar todos los documentos cuyo nombre sea el especificado
     //en 'nombreProducto' , y borrarlos.
 
+    res.status(204).send('borrado!')//establezco el estado en 204 ,para que no me de error 'net::ERR_EMPTY_RESPONSE' en el método DELETE
+
+
 }
 
 

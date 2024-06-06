@@ -8,6 +8,7 @@ const insumosSchema = new mongoose.Schema ({ // creamos un nuevo esquema de dato
     nombre: String,
     cantidad: Number,
     unidad: String,
+    limite: Number  // cantidad limite de insumo (una cantidad menor mostrará un cartel de advertencia)
 
 },
 {

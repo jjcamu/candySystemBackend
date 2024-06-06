@@ -71,4 +71,18 @@ consumosCtrl.updateConsumos = async (req,res) => {
 
 }
 
+//Elimina documento segun su _id
+
+
+consumosCtrl.eliminaConsumo =  async (req,res) => {
+
+    var _idDelConsumo = req.params.parametro;  //datos que recibo desde el front a traves del parametro ingresado por url
+
+    await modeloConsumos.remove({ _id: _idDelConsumo }) //buscar documento cuyo _id sea '_idDelConsumo' y borrarlo.
+
+    res.status(204).send('borrado!')//establezco el estado en 204 ,para que no me de error 'net::ERR_EMPTY_RESPONSE' en el método DELETE
+
+
+}
+
 module.exports = consumosCtrl ; 

@@ -1,3 +1,5 @@
+// Sistema para el Control de Stock de Insumos Candy System - creado por Juan Jose Camussi 2024
+// Backend 
 //MODULO PRINCIPAL (node debe ejecutar este archivo)
 
 //importo el servidor (archivo app.js)

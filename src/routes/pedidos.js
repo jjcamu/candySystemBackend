@@ -2,7 +2,7 @@ const {Router} = require('express') //importo la funcion Router del modulo 'expr
 const router = Router() 
 
 //Importo el controlador para utilizar sus funciones
-const  { getPedidos, createPedido, eliminaPedido } = require('../controllers/pedidos.controller')
+const  { getPedidos, createPedido, eliminaPedido, cancelaPedido } = require('../controllers/pedidos.controller')
 //destructuro el modulo importado en sus diferentes propiedades. 
 //Cada propiedad almacena una funcion definida en 'pedidos.controller'
 
@@ -21,6 +21,9 @@ router.route('/')
 router.route('/:parametro') //cuando se ingresa por la url (ruta) un parametro
 
     .delete(eliminaPedido) // peticion de borrar (la hago recibiendo un parametro desde el front, ya que no me funciona de otra manera)
-    //.delete(cancelaPedido) // peticion de borrar pero con una logica adicional
+
+router.route('/cancelar/:parametro') //cuando se ingresa por la url (ruta) un parametro
+
+    .delete(cancelaPedido) // peticion de borrar pero con una logica adicional
 
 module.exports = router;

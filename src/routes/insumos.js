@@ -12,7 +12,8 @@ router.route('/')
 router.route(('/:parametro')) //cuando se ingresa por la url (ruta) un parametro
 
     .delete(eliminaInsumo) // peticion de borrar (la hago recibiendo un parametro desde el front)
-    //.delete(cancelaPedido) // peticion de borrar pero con una logica adicional
+
+
 
     
 module.exports = router;

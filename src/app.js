@@ -25,6 +25,9 @@ app.use('/api/pedidos', require('./routes/pedidos.js'))
 app.use('/api/productos', require('./routes/productos.js')) 
 app.use ('/api/insumos', require('./routes/insumos.js'))
 app.use ('/api/consumos', require('./routes/consumos.js'))
+app.use ('/api/login', require('./routes/login.js'))
+
+
 
 
 module.exports = app //exporto la aplicacion de express (el servidor), para ser utilizado en otro modulo del proyecto

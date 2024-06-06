@@ -1,7 +1,7 @@
 const {Router} = require('express') //importo la funcion Router del modulo 'express'
 const router = Router() 
 
-const  { getConsumos, createConsumo, updateConsumos } = require('../controllers/consumos.controller')
+const  { getConsumos, createConsumo, updateConsumos, eliminaConsumo  } = require('../controllers/consumos.controller')
 
 router.route('/') 
 
@@ -9,9 +9,9 @@ router.route('/')
     .post(createConsumo) // post: crear documento
     .put(updateConsumos) // actualizacion de todos los documentos
 
-router.route('/:id') //cuando se ingresa por la url (ruta) un parametro, en este caso el id de un documento
+router.route(('/:parametro')) //cuando se ingresa por la url (ruta) un parametro
 
-   // .delete(eliminaPedido) // peticion de borrar
+    .delete(eliminaConsumo) // peticion de borrar (la hago recibiendo un parametro desde el front)
     //.delete(cancelaPedido) // peticion de borrar pero con una logica adicional
 
     
