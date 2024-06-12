@@ -3,7 +3,7 @@
 const mongoose = require ('mongoose') //importo el modulo mongoose, que me permite que el servidor interactue
 //con la base de datos
 
-mongoose.connect('mongodb://localhost/candySystemDB') //realizo la conexion
+mongoose.connect('mongodb://' + process.env.IP + 'candySystemDB') //realizo la conexion
 
 const connection = mongoose.connection; //almaceno la conexion realizada, para trabajar con ella.
 
