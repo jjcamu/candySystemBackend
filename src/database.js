@@ -11,19 +11,19 @@ const { MongoClient } = require("mongodb");
 const client = new MongoClient(process.env.URL);
 
 
-console.log(client)
-console.dir(client)
-console.log(typeof(client))
+
 
 async function run() {
-  try {
-    await client.connect();
+
+    await client.connect()
     const database = client.db("test");
     const ratings = database.collection("devices");
+    
     const cursor = ratings.find();
     await cursor.forEach(doc => console.dir(doc));
-  } finally {
-    await client.close();
-  }
+
+    console.log(database)
+
+
 }
-run().catch(console.dir);
+run()
