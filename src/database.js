@@ -9,8 +9,9 @@ var MongoClient = require('mongodb').MongoClient;
 
  MongoClient.connect(process.env.URL, function(err, client) {
 
-    console.log('El servidor se ha conectado a la base de datos!')
+    //console.log('El servidor se ha conectado a la base de datos!')
   
+    console.log(process.env.URL)
     async function run() {
         try {
 
