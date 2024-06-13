@@ -46,11 +46,11 @@ await nuevoPedido.save(); //como nuevoPedido es un modelo de mongoose, utilizo s
 // la base de datos. Al tratarse de la instruccion asincrona de esta "async function", antepondremos el operador 'await' 
 
 
-var advertencias = await actualizarInsumoPorPedido(cantidad, producto)  //actualizar la cantidad de insumos, 
+//var advertencias = await actualizarInsumoPorPedido(cantidad, producto)  //actualizar la cantidad de insumos, 
 //y guardar las advertencias emitidas por escaces o falta de algun insumo.
 
 
-res.json({message: advertencias })
+res.json({message: 'advertencias' })
 
 }
 

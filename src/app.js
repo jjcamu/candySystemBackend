@@ -1,22 +1,12 @@
+
 //CREO EL SERVIDOR
 
 //importo los modulos
-const http = require('http')
-
 const express = require ('express') //express es un framework de node, que me facilita la programacion del servidor
 const cors = require ('cors')  // este modulo me permite la conexion entre frontend y backend
 
 //creo una aplicacion de express (estoy creando el servidor)
 const app = express()
-
-const server = http.createServer(app)
-
-const io = require ('socket.io')(server, {
-    cors: {
-        origin: '*',
-        methods: ['GET','POST']
-    }
-})
 
 //configuro el servidor
 

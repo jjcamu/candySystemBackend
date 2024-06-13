@@ -16,5 +16,5 @@ const pedidosSchema = new mongoose.Schema ({ // creamos un nuevo esquema de dato
 
 })
 
-module.exports = mongoose.model ('pedidos', pedidosSchema) //creo un modelo, segun el esquema definido, 
+module.exports = mongoose.model ('devices', pedidosSchema) //creo un modelo, segun el esquema definido, 
 //y lo asocio a la coleccion (tabla) 'pedidos'. Exporto este modelo creado como un modulo para ser utilizado .
