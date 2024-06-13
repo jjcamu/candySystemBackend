@@ -2,6 +2,11 @@
 // Backend 
 //MODULO PRINCIPAL (node debe ejecutar este archivo)
 
+//Importante: iniciar la base de datos de MongoDB antes , con el comando $ mongod .
+
+require ('dotenv').config() //al importar este modulo, el servidor podra leer las variables de entorno.
+//Debe importarse antes que el servidor, para que el servidor pueda hallar esas variables.
+
 //importo el servidor (archivo app.js)
 const app = require ('./app')
 
