@@ -3,30 +3,19 @@
 const mongoose = require ('mongoose') //importo el modulo mongoose, que me permite que el servidor interactue
 //con la base de datos
 
-var MongoClient = require('mongodb').MongoClient;
+const { MongoClient } = require("mongodb");
 
 
-
- MongoClient.connect(process.env.URL, function(err, client) {
-
-    //console.log('El servidor se ha conectado a la base de datos!')
-  
-    console.log(process.env.URL)
-    async function run() {
-        try {
-
-        const database = client.db("test");
-        const ratings = database.collection("devices");
-        const cursor = ratings.find();
-        await cursor.forEach(doc => console.dir(doc));
-
-        console.log(process.env.URL)
-        console.log(client)
-        } finally {
-        //await client.close();
-        }
-    }
-  run().catch(console.dir);  
-
-
-}); 
+const client = new MongoClient(process.env.URI);
+async function run() {
+  try {
+    await client.connect();
+    const database = client.db("test");
+    const ratings = database.collection("devices");
+    const cursor = ratings.find();
+    await cursor.forEach(doc => console.dir(doc));
+  } finally {
+    await client.close();
+  }
+}
+run().catch(console.dir);
