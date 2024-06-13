@@ -8,12 +8,11 @@ const { MongoClient } = require("mongodb");
 //uri = 'mongodb://jjcamussi:A64wfQrByvjZ3rzz@ac-fdii898-shard-00-00.5otvwda.mongodb.net:27017,ac-fdii898-shard-00-01.5otvwda.mongodb.net:27017,ac-fdii898-shard-00-02.5otvwda.mongodb.net:27017/?ssl=true&replicaSet=atlas-qw3ysb-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0'
 //const client = new MongoClient(uri);
 
-const client = new MongoClient(process.env.URI);
+const client = new MongoClient(process.env.URL);
 
-console.log(client)
-console.log(MongoClient)
-console.log(process.env.URI)
-console.log(typeof(process.env.URI))
+
+console.log(process.env.URL)
+console.log(typeof(process.env.URL))
 
 async function run() {
   try {
