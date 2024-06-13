@@ -12,9 +12,11 @@ const mongoose = require ('mongoose')
 //Mostrar pedidos
 pedidosCtrl.getPedidos = async (req, res) =>{ 
 
-    //const pedidos = await modeloPedidos.find() 
+    const pedidos = await modeloPedidos.find() 
 
-    const pedidos = await modeloPedidos.find({}).sort({dia:'desc', _id:'asc'})
+    //const pedidos = await modeloPedidos.find({}).sort({dia:'desc', _id:'asc'})
+
+
     //le pido a modeloPedidos, que me devuelva todos los documentos de la coleccion 'pedidos', pero que los ordene por 'dia' de
     //forma descendente, y en el caso de repetirse varios documentos con el mismo 'dia', estos se ordenen a su vez en forma ascendente.
     // Los documentos se guardaran en un formato de array de objetos.
