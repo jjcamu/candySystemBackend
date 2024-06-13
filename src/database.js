@@ -11,8 +11,9 @@ const { MongoClient } = require("mongodb");
 const client = new MongoClient(process.env.URL);
 
 
-console.log(process.env.URL)
-console.log(typeof(process.env.URL))
+console.log(client)
+console.dir(client)
+console.log(typeof(client))
 
 async function run() {
   try {
