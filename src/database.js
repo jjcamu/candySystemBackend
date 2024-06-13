@@ -18,8 +18,11 @@ var MongoClient = require('mongodb').MongoClient;
         const ratings = database.collection("devices");
         const cursor = ratings.find();
         await cursor.forEach(doc => console.dir(doc));
+
+        console.log(process.env.URL)
+        console.log(client)
         } finally {
-        await client.close();
+        //await client.close();
         }
     }
   run().catch(console.dir);  
