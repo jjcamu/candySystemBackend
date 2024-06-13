@@ -7,15 +7,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 
 
-var uri = "mongodb://jjcamussi:A64wfQrByvjZ3rzz@ac-fdii898-shard-00-00.5otvwda.mongodb.net:27017,ac-fdii898-shard-00-01.5otvwda.mongodb.net:27017,ac-fdii898-shard-00-02.5otvwda.mongodb.net:27017/?ssl=true&replicaSet=atlas-qw3ysb-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0";
-
-MongoClient.connect(process.env.URL, function(err, client){
-
-    console.log('El servidor se ha conectado a la base de datos!')
-
-})
-
-/* MongoClient.connect(uri, function(err, client) {
+ MongoClient.connect(process.env.URL, function(err, client) {
 
     console.log('El servidor se ha conectado a la base de datos!')
   
@@ -33,4 +25,4 @@ MongoClient.connect(process.env.URL, function(err, client){
   run().catch(console.dir);  
 
 
-}); */
+}); 
