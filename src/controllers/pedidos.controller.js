@@ -12,6 +12,7 @@ const mongoose = require ('mongoose')
 //Mostrar pedidos
 pedidosCtrl.getPedidos = async (req, res) =>{ 
 
+    console.log('hola')
     const pedidos = await modeloPedidos.find() 
 
     //const pedidos = await modeloPedidos.find({}).sort({dia:'desc', _id:'asc'})
