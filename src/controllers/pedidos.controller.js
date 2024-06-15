@@ -12,10 +12,9 @@ const mongoose = require ('mongoose')
 //Mostrar pedidos
 pedidosCtrl.getPedidos = async (req, res) =>{ 
 
-    console.log('hola')
-    const pedidos = await modeloPedidos.find() 
 
-    //const pedidos = await modeloPedidos.find({}).sort({dia:'desc', _id:'asc'})
+
+    const pedidos = await modeloPedidos.find({}).sort({dia:'desc', _id:'asc'})
 
 
     //le pido a modeloPedidos, que me devuelva todos los documentos de la coleccion 'pedidos', pero que los ordene por 'dia' de
@@ -49,11 +48,11 @@ await nuevoPedido.save(); //como nuevoPedido es un modelo de mongoose, utilizo s
 // la base de datos. Al tratarse de la instruccion asincrona de esta "async function", antepondremos el operador 'await' 
 
 
-//var advertencias = await actualizarInsumoPorPedido(cantidad, producto)  //actualizar la cantidad de insumos, 
+var advertencias = await actualizarInsumoPorPedido(cantidad, producto)  //actualizar la cantidad de insumos, 
 //y guardar las advertencias emitidas por escaces o falta de algun insumo.
 
 
-res.json({message: 'advertencias' })
+res.json({message: advertencias })
 
 }
 
